@@ -6,7 +6,7 @@ kind: skill
 group: writing
 mine: true
 last_checked: 2026-08-30
-upstream_pushed: 2026-09-12
+upstream_pushed: 2026-09-21
 checked_against: ["claude-code 2.1.251", "opus-5"]
 tags: [review, learning, pr, skill]
 ---
