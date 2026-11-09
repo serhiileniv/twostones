@@ -63,14 +63,13 @@ What's left to you, once there are real entries:
 
 ## What runs by itself
 
-Two workflows in `.github/workflows/`. Both need the repo pushed to GitHub first.
+One workflow in `.github/workflows/`. It needs the repo pushed to GitHub first.
 
 | Workflow | When | What it does |
 |---|---|---|
 | `build.yml` | every push touching `entries/`, `library/`, `build.py` | `--check`, render, commit `README.md` + `site/`. You never rebuild by hand. |
-| `sync.yml` | Mondays 06:00 UTC, or manual | `--sync` pulls each upstream's own one-line description and last-push date into the entry and commits; then `--drift` opens **one** issue listing entries whose upstream moved after the date you last checked them. |
 
-**The line neither workflow crosses:** nothing automated ever writes `last_checked` or
+**The line automation never crosses:** nothing automated ever writes `last_checked` or
 `checked_against`. Those mean *you* looked. A bot bumping them would make every date on the site
 a lie, which is the only claim this project makes. Sync refreshes facts; drift raises a hand.
 
